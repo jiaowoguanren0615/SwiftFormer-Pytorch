@@ -44,7 +44,7 @@ optimizer = SophiaG(model.parameters(), lr=2e-4, betas=(0.965, 0.99), rho=0.01, 
 6. master_port: <master node (machine/server) port number>
 ```
 ### Note: 
-If you want to use multiple GPU for training, whether it is a single machine with multiple GPUs or multiple machines with multiple GPUs, each GPU will divide the batch_size equally. For example, batch_size=4 in my train_gpu.py. If I want to use 2 GPUs for training, each GPU will divide the batch_size. That means batch_size=2 on each GPU. ___Do not let batch_size=1 on each GPU__, otherwise BN layer maybe report an error.
+If you want to use multiple GPU for training, whether it is a single machine with multiple GPUs or multiple machines with multiple GPUs, each GPU will divide the batch_size equally. For example, batch_size=4 in my train_gpu.py. If I want to use 2 GPUs for training, each GPU will divide the batch_size. That means batch_size=2 on each GPU. ___Do not let batch_size=1 on each GPU___, otherwise BN layer maybe report an error.
 
 ### train model with single-machine single-GPU：
 ```
